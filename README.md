@@ -14,8 +14,8 @@ Waki is a web browser that uses AI to generate images and we can chat with ai, i
 1. Clone the repository
 
 ```bash
-git clone https://github.com/Alinshan/waki.git
-cd waki
+git clone https://github.com/Alinshan/Waki.git
+cd Waki
 ```
 
 2. Install dependencies
