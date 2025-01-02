@@ -431,7 +431,7 @@ class Waki(QWidget):
                 "content": prompt
             })
         response = g4f.ChatCompletion.create(
-            model=g4f.models.llama2_70b,
+            model=g4f.models.llama2_7b,
             messages=self.history,
         )
 
