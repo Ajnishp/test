@@ -8,6 +8,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWebEngineWidgets import *
 
+
 class Waki(QWidget):
     def __init__(self):
         super().__init__()
@@ -263,4 +264,14 @@ class Waki(QWidget):
             label = dialog.findChild(QLabel)
             label.setPixmap(pixmap)
 
-        except requests
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching image: {e}")
+            QMessageBox.critical(self, "Error", "Failed to generate the image. Please try again.")
+        except ValueError as e:
+            print(f"Error: {e}")
+            QMessageBox.critical(self, "Error", "Image URL not found. Please try a different prompt.")
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+            QMessageBox.critical(self, "Error", "An unexpected error occurred. Please try again.")
+
+    def open_chat_window(self
